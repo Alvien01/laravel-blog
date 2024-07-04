@@ -1,6 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ArtikelController;
+use Ap\Model\Artikel;
+use App\Http\Controllers\ArticelController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,11 +16,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
 Route::get('/add', function () {
     return view('add');
 });
 Route::get('/', 'ArtikelController@show');
 Route::post('/add_process', 'ArtikelController@add_process');
+Route::get('/detail/{id}', 'ArtikelController@detail');
+// Route::get('/add_process',[ArticelController::class, 'add_process']);
+// Route::post('/add_process', 'ArtikelController@add_process');
+// Route::post('/add_process',  [ArticelController::class, 'add_process']);
+// Route::get('/detail/{id}', 'ArticelController@detail');
+// Route::get('/admin', 'ArtikelController@showbyadmin');

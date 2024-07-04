@@ -81,6 +81,7 @@
   <body>
     <div class="container mt-4">
         <div class="row">
+            @yield('header')
             @yield('main')
             @yield('sidebar')
         </div>
