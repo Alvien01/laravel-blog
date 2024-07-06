@@ -19,7 +19,7 @@
             <img src="https://atlantictravelsusa.com/wp-content/uploads/2016/04/dummy-post-horisontal-thegem-blog-default.jpg" class="card-img-top" alt="gambar" >
             <div class="card-body">
                 <h5 class="card-title">{{ $article->judul }}</h5>
-                <a href="/detail/{{ $article->id }}" class="btn btn-primary">Baca Artikel</a>
+                <a href="{{ route('detail', $article->id) }}" class="btn btn-primary">Baca Artikel</a>
             </div>
         </div>
     </div>

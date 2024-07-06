@@ -1,9 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\ArtikelController;
-use Ap\Model\Artikel;
 use App\Http\Controllers\ArticelController;
+use Ap\Model\Artikel;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,9 +18,15 @@ use App\Http\Controllers\ArticelController;
 Route::get('/add', function () {
     return view('add');
 });
-Route::get('/', 'ArtikelController@show');
-Route::post('/add_process', 'ArtikelController@add_process');
-Route::get('/detail/{id}', 'ArtikelController@detail');
+Route::get('/', [ArticelController::class, 'show'])->name('get');
+Route::post('/add_user', [ArticelController::class, 'add_process'])->name('add');
+Route::get('/detail/{id}', [ArticelController::class, 'detail'])->name('detail');
+Route::get('/admin', [ArticelController::class, 'show_by_admin'])->name('show_by_admin');
+Route::get('/edit/{id}',[ArticelController::class, 'edit'])->name('edit');
+Route::post('/edit_process',[ArticelController::class, 'edit_process'])->name('edit');
+Route::get('/delete/{id}', [ArticelController::class, 'delete'])->name('delete');
+// Route::post('/add_process', 'ArticelController@add_process')->name('add');
+// Route::get('/detail/{id}', 'ArticelController@detail');
 // Route::get('/add_process',[ArticelController::class, 'add_process']);
 // Route::post('/add_process', 'ArtikelController@add_process');
 // Route::post('/add_process',  [ArticelController::class, 'add_process']);

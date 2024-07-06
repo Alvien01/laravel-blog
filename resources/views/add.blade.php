@@ -7,7 +7,7 @@
 <!-- membuat komponen main yang berisi form untuk mengisi judul dan isi artikel -->
 @section('main')
 <div class="col-md-8 col-sm-12 bg-white p-4">
-    <form method="post" action="/add_process">
+    <form method="post" action="  {{route('add')}} ">
     @csrf
         <div class="form-group">
             <label>Judul Artikel</label>
