@@ -13,16 +13,17 @@
         <h2>{{ $article->judul }}</h2>
         <p class="mt-5">{{ $article->deskripsi }}</p>
     </div>
-</div>
-@endsection
- 
-<!-- menampilkan tombol kembali ke halaman utama -->
-@section('sidebar')
-<div class="col-md-4 offset-md-1 col-sm-12 bg-white p-4 h-100">
+    <div class="col-md-4 offset-md-1 col-sm-12 bg-white p-4 h-100">
    <center> 
         <a href="/"> 
             <button class="btn btn-info text-white w-100">Kembali</button> 
         </a>
     </center>
 </div>
+</div>
+@endsection
+ 
+<!-- menampilkan tombol kembali ke halaman utama -->
+@section('sidebar')
+
 @endsection

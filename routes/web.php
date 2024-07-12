@@ -32,3 +32,6 @@ Route::get('/delete/{id}', [ArticelController::class, 'delete'])->name('delete')
 // Route::post('/add_process',  [ArticelController::class, 'add_process']);
 // Route::get('/detail/{id}', 'ArticelController@detail');
 // Route::get('/admin', 'ArtikelController@showbyadmin');
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
